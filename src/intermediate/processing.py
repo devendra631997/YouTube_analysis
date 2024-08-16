@@ -26,6 +26,7 @@ def channel_detail_processing(channel_id=None, channel_handle=None):
         df3 = df2.select(col('*'),'item_values.*' )
         df4 = df3.select(df.etag, df.kind, 'pageInfo.*','status.*', 'brandingSettings.channel.*', 'statistics.*')
         df4.toPandas().to_csv(output_path,index_label='record_no')
+        # TODO: Channel ID is missing
         return output_path
     except Exception as e:
         print(e)
