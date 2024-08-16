@@ -31,5 +31,5 @@
 - Based on channel_id, process all details related to video for that channel_id
 - save video details into csv file to desired location(based on env`BASE_OUTPUT_PATH`)
 
-## Propose AWS Architecture
+## Proposed AWS Architecture
 ![Alt text](https://github.com/devendra631997/YouTube_analysis/blob/main/docs/aws.jpg "Title")
