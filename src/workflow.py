@@ -44,4 +44,4 @@ def with_channel_ids(channel_ids):
         print(path)
 
 # with_channel_ids(channel_ids_value)
-# with_channel_handles(channel_handles_value)
+with_channel_handles(channel_handles_value)
