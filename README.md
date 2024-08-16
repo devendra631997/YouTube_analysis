@@ -22,7 +22,7 @@
 ### [get_video_id_by_channel](https://github.com/devendra631997/YouTube_analysis/blob/458be49070ccf73b380476be3995c5010a74b17c/src/extractor/details.py#L26)
 - Based on channel_id, fetches top 50 videos id's (order by `viewCount`)
 - saves video ids into json file to desired location(based on env`BASE_INPUT_PATH`)
-- After getting all videos ids, using video_ids fetches all video details`'id,statistics,contentDetails,liveStreamingDetails,topicDetails'` using [get_video_details](https://github.com/devendra631997/YouTube_analysis/blob/458be49070ccf73b380476be3995c5010a74b17c/src/extractor/details.py#L45C5-L45C22) 
+- After getting all videos ids, using video_ids fetches all video details`'id, statistics, contentDetails, liveStreamingDetails, topicDetails'` using [get_video_details](https://github.com/devendra631997/YouTube_analysis/blob/458be49070ccf73b380476be3995c5010a74b17c/src/extractor/details.py#L45C5-L45C22) 
 - saves video details into json file to desired location(based on env`BASE_INPUT_PATH`)
 ### [channel_detail_processing](https://github.com/devendra631997/YouTube_analysis/blob/458be49070ccf73b380476be3995c5010a74b17c/src/intermediate/processing.py#L14)
 - Based on channel_id, process all details related to channel
