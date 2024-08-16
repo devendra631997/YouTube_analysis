@@ -1,4 +1,4 @@
-## YouTube_analysis
+## YouTube Analysis
 #### Build a scalable YouTube data pipeline to capture and analyze video metrics (e.g., number of videos, likes, comments, subscribers, playlists).
 ## Technology used
 - Python
@@ -15,19 +15,19 @@
 ## To Run
 - `python3 workflow.py`
 ## Function walk through
-### get_channel_details
+### [get_channel_details](https://github.com/devendra631997/YouTube_analysis/blob/458be49070ccf73b380476be3995c5010a74b17c/src/extractor/details.py#L7)
 - Based on channel_id or channel_handle, fetches all details related to channel
 - It's fetching these details`brandingSettings, contentDetails, contentOwnerDetails, id, statistics, status, topicDetails'`
 - saves it into json file to desired location(based on env`BASE_INPUT_PATH`)
-### get_video_id_by_channel
+### [get_video_id_by_channel](https://github.com/devendra631997/YouTube_analysis/blob/458be49070ccf73b380476be3995c5010a74b17c/src/extractor/details.py#L26)
 - Based on channel_id, fetches top 50 videos id's (order by `viewCount`)
 - saves video ids into json file to desired location(based on env`BASE_INPUT_PATH`)
 - After getting all videos ids, using video_ids fetches all video details
 - saves video details into json file to desired location(based on env`BASE_INPUT_PATH`)
-### channel_detail_processing
+### [channel_detail_processing](https://github.com/devendra631997/YouTube_analysis/blob/458be49070ccf73b380476be3995c5010a74b17c/src/intermediate/processing.py#L14)
 - Based on channel_id, process all details related to channel
 - save channel details into csv file to desired location(based on env`BASE_OUTPUT_PATH`) 
-### video_details_processing
+### [video_details_processing](https://github.com/devendra631997/YouTube_analysis/blob/458be49070ccf73b380476be3995c5010a74b17c/src/intermediate/processing.py#L34)
 - Based on channel_id, process all details related to video for that channel_id
 - save video details into csv file to desired location(based on env`BASE_OUTPUT_PATH`)
 
