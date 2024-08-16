@@ -32,4 +32,4 @@
 - save video details into csv file to desired location(based on env`BASE_OUTPUT_PATH`)
 
 ## Proposed AWS Architecture
-![Alt text](https://github.com/devendra631997/YouTube_analysis/blob/main/docs/aws.jpg "Title")
+![Architecture](https://github.com/devendra631997/YouTube_analysis/blob/main/docs/aws.jpg "Title")
