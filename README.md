@@ -35,4 +35,4 @@
 ![Architecture](https://github.com/devendra631997/YouTube_analysis/blob/main/docs/aws.jpg "Title")
 
 ## Anlysis NoteBook
-![Analysis](https://github.com/devendra631997/YouTube_analysis/blob/main/view_analysis/analysis.ipynb)
+[Analysis](https://github.com/devendra631997/YouTube_analysis/blob/main/view_analysis/analysis.ipynb)
