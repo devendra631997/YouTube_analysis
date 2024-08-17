@@ -1,10 +1,10 @@
 ## YouTube Analysis
 #### Build a scalable YouTube data pipeline to capture and analyze video metrics (e.g., number of videos, likes, comments, subscribers, playlists).
 ## Technology used
-- Python
-- Pyspark
-- googleapiclient
-- AWS
+- Python [ref](https://www.python.org)
+- Pyspark [ref](https://spark.apache.org/docs/latest/api/python/index.html)
+- googleapiclient [ref](https://developers.google.com/android/reference/com/google/android/gms/common/api/GoogleApiClient)
+- AWS [ref](https://aws.amazon.com)
 ## ENV
 - YOUTUBE_API_KEY = 'YOUTUBE_API_KEY'
 - BASE_INPUT_PATH = 'RAW DATA WILL BE SAVED AT THIS LOCATION' 
@@ -39,3 +39,6 @@
 
 ## Presentation Deck
 [Presentation](https://docs.google.com/presentation/d/1Yy2llo3GB8m5K982WG-uDMWFGlDwzEugeqgTUbX_0ok/edit?usp=sharing)
+
+## Created By
+Devendra Kumar Singh [website](https://devendraksingh.netlify.app)
