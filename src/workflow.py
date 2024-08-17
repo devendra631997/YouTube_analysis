@@ -17,31 +17,43 @@ channel_handles_value = os.getenv('CHANNEL_HANDLES_VALUE').split(',')
 channel_ids_value = os.getenv('CHANNEL_IDS_VALUE').split(',')
 
 # Here is Extractor
-from extractor.details import get_channel_details, get_video_id_by_channel
+from src.extractor.details import YouTubeDataExtractor
 # Here is intermediate processing
-from intermediate.processing import channel_detail_processing, video_details_processing
+from intermediate.processing import YouTubeDataProcessing
 
 def with_channel_handles(channel_handles):
+    extractor = YouTubeDataExtractor()
+    processor = YouTubeDataProcessing()
     for channel_handle in channel_handles:
-        channel_id= get_channel_details(channel_handle= channel_handle)
-        print(channel_id)
-        video_details_by_channel = get_video_id_by_channel(channel_id = channel_id)
-        print(video_details_by_channel)
-        path = channel_detail_processing(channel_id=channel_id)
-        print(path)
-        path = video_details_processing(channel_id=channel_id)
-        print(path)
+        channel_id, skip_flag= extractor.get_channel_details(channel_handle= channel_handle)
+        if skip_flag:
+            continue
+        video_details_by_channel, skip_flag = extractor.get_video_id_by_channel(channel_id = channel_id)
+        if skip_flag:
+            continue
+        path, skip_flag = processor.channel_detail_processing(channel_id=channel_id)
+        if skip_flag:
+            continue
+        path, skip_flag = processor.video_details_processing(channel_id=channel_id)
+        if skip_flag:
+            continue
 
 def with_channel_ids(channel_ids):
+    extractor = YouTubeDataExtractor()
+    processor = YouTubeDataProcessing()
     for channel_id in channel_ids:
-        channel_id= get_channel_details(channel_id= channel_id)
-        print(channel_id)
-        video_details_by_channel = get_video_id_by_channel(channel_id = channel_id)
-        print(video_details_by_channel)
-        path = channel_detail_processing(channel_id=channel_id)
-        print(path)
-        path = video_details_processing(channel_id=channel_id)
-        print(path)
-
-# with_channel_ids(channel_ids_value)
-with_channel_handles(channel_handles_value)
+        channel_id, skip_flag= extractor.get_channel_details(channel_id= channel_id)
+        if skip_flag:
+            continue
+        video_details_by_channel, skip_flag = extractor.get_video_id_by_channel(channel_id = channel_id)
+        if skip_flag:
+            continue
+        path, skip_flag = processor.channel_detail_processing(channel_id=channel_id)
+        if skip_flag:
+            continue
+        path, skip_flag = processor.video_details_processing(channel_id=channel_id)
+        if skip_flag:
+            continue
+#
+with_channel_ids(channel_ids_value)
+# with_channel_handles(channel_handles_value)
