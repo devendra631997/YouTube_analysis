@@ -36,3 +36,6 @@
 
 ## Anlysis NoteBook
 [Analysis](https://github.com/devendra631997/YouTube_analysis/blob/main/view_analysis/analysis.ipynb)
+
+## Presentation Deck
+[Presentation](https://docs.google.com/presentation/d/1Yy2llo3GB8m5K982WG-uDMWFGlDwzEugeqgTUbX_0ok/edit?usp=sharing)
